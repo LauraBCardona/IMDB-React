@@ -7,11 +7,14 @@ module.exports = {
 mode: 'development',
   module: {
     rules: [{
-   test: /\.js$/,
+    test: /\.(js|jsx)?$/,
    exclude: /node_modules/,
    use: {
      loader: "babel-loader"
-   }
+   },
+   resolve: {
+    extensions: ['.js', '.jsx'],
+  },
  },
   {
    test: /\.css$/,
